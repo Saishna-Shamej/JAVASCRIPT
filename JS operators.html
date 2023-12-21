@@ -1,0 +1,73 @@
+<!--
+There are different types of JavaScript operators:
+
+Arithmetic Operators
+Assignment Operators
+Comparison Operators
+String Operators
+Logical Operators
+Bitwise Operators
+Ternary Operators
+Type Operators
+
+Arithmetic
+
++	Addition
+-	Subtraction
+*	Multiplication
+**	Exponentiation (ES2016)
+/	Division
+%	Modulus (Division Remainder)
+++	Increment
+--	Decrement
+
+Assignment
+
+=	    x = y	    x = y
++=	    x += y	    x = x + y
+-=	    x -= y	    x = x - y
+*=	    x *= y	    x = x * y
+/=	    x /= y	    x = x / y
+%=	    x %= y	    x = x % y
+**=	    x **= y	    x = x ** y
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript String Operators</h1>
+
+<p>All conditional operators can be used on both numbers and strings.</p>
+
+<p id="demo"></p>
+
+<h2>The += Operator</h2>
+<p>The assignment operator += can concatenate strings.</p>
+
+<p id="demo1"></p>
+
+<h2>The + Operator</h2>
+<p>Adding a number and a string, returns a string.</p>
+<p id="demo2"></p>
+
+<script>
+let text1 = "A";
+let text2 = "B";
+let result = text1 < text2;
+document.getElementById("demo").innerHTML = "Is A less than B? " + result;
+
+let text3 = "What a very ";
+text3 += "nice day";
+document.getElementById("demo1").innerHTML = text3;
+
+let x = 5 + 5;
+let y = "5" + 5;
+let z = "Hello" + 5;
+document.getElementById("demo2").innerHTML =
+x + "<br>" + y + "<br>" + z;
+
+</script>
+
+</body>
+</html>
