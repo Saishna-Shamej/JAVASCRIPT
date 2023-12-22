@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+
+<p id="demo"></p>
+
+<p>JavaScript has dynamic types. This means that the same variable can be used to hold different data types:</p>
+
+<p id="demo1"></p>
+
+<p>Strings are written with quotes. You can use single or double quotes:</p>
+
+<p id="demo2"></p>
+
+<p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+
+<p id="demo3"></p>
+
+<p>Numbers can be written with, or without decimals:</p>
+
+<p id="demo4"></p>
+
+<p>Extra large or extra small numbers can be written with scientific (exponential) notation:</p>
+
+<p id="demo5"></p>
+
+<h1>JavScript Bigint</h1>
+<p>A BigInt can not have decimals.</p>
+
+<p id="demo6"></p>
+
+<p>You cannot perform math between a BigInt type and a Number type.</p>
+
+<h2>JavaScript Arrays</h2>
+
+<p>Array indexes are zero-based, which means the first item is [0].</p>
+
+<p id="demo7"></p>
+
+<h2>JavaScript Objects</h2>
+
+<p id="demo8"></p>
+
+<h1>JavaScript Operators</h1>
+<h2>The typeof Operator</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
+
+<p id="demo9"></p>
+
+<script>
+let x = 16 + "Volvo";
+document.getElementById("demo").innerHTML = x;
+
+let y;         // Now x is undefined
+y = 5;         // Now x is a Number
+y = "John";    // Now x is a String
+
+document.getElementById("demo1").innerHTML = y;
+
+let carName1 = "Volvo XC60";
+let carName2 = 'Volvo XC60';
+
+document.getElementById("demo2").innerHTML =
+carName1 + "<br>" + 
+carName2; 
+
+let answer1 = "It's alright";
+let answer2 = "He is called 'Johnny'";
+let answer3 = 'He is called "Johnny"';
+
+document.getElementById("demo3").innerHTML =
+answer1 + "<br>" + 
+answer2 + "<br>" + 
+answer3;
+
+let x1 = 34.00;
+let x2 = 34;
+let x3 = 3.14;
+
+document.getElementById("demo4").innerHTML =
+x1 + "<br>" + x2 + "<br>" + x3;
+
+let p = 123e5;
+let z = 123e-5;
+
+document.getElementById("demo5").innerHTML =
+p + "<br>" + z;
+
+let q = BigInt("123456789012345678901234567890");
+document.getElementById("demo6").innerHTML = q;
+
+const cars = ["Saab","Volvo","BMW"];
+
+document.getElementById("demo7").innerHTML = cars[0];
+
+const person = {
+  firstName : "John",
+  lastName  : "Doe",
+  age     : 50,
+  eyeColor  : "blue"
+};
+
+document.getElementById("demo8").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+
+let car;
+let bike = "";
+document.getElementById("demo9").innerHTML = 
+typeof "" + "<br>" +
+typeof "John" + "<br>" + 
+typeof "John Doe" + "<br>" +
+typeof 0 +  "<br>" +            // Returns "number"
+typeof 314 +  "<br>" +        // Returns "number"
+typeof 3.14 +  "<br>" +        // Returns "number"
+typeof (3) +  "<br>" +         // Returns "number"
+typeof (3 + 4) + "<br>" +        // Returns "number"
+
+car + "<br>" + typeof car + "<br>" +
+
+"The value is: " +
+bike + "<br>" +
+"The type is: " + typeof bike;
+</script>
+
+</body>
+</html>
