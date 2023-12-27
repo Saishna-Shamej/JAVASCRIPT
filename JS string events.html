@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--<h1>JavaScript Strings</h1>
+<h2>The length Property</h2>
+
+<p>The length of the string is:</p>
+<p id="demo"></p>
+
+<h1>JavaScript String Methods</h1>
+<p>The substr() method extract a part of a string
+and returns the extracted parts in a new string:</p>
+
+<p id="demo1"></p>
+-->
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo2">Please visit Microsoft!</p>
+
+<p>Replace all occurrences of "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo3">Please visit Microsoft and Microsoft!</p>
+
+<p>Convert string to upper case:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo4">Hello World!</p>
+
+<h2>The concat() Method</h2>
+
+<p>The concat() method joins two or more strings:</p>
+
+<p id="demo5"></p>
+
+<p>The charAt() method returns the character at a given position in a string:</p>
+
+<p id="demo6"></p>
+
+<p>The charCodeAt() method returns the unicode of the character at a given position in a string:</p>
+
+<p id="demo7"></p>
+
+<script>
+/*let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = text.length;
+
+let text1 = "Apple, Banana, Kiwi";
+let part1 = text1.slice(-12);
+document.getElementById("demo").innerHTML = part1;
+
+let str = "Apple, Banana, Kiwi";
+document.getElementById("demo1").innerHTML = str.substr(7,6);
+
+function myFunction() {
+  let text2 = document.getElementById("demo2").innerHTML;
+  document.getElementById("demo2").innerHTML =
+  text2.replace("Microsoft","W3Schools");
+}
+
+function myFunction() {
+  let text3 = document.getElementById("demo3").innerHTML; 
+  document.getElementById("demo3").innerHTML =
+  text3.replace(/Microsoft/g,"W3Schools");
+}
+
+function myFunction() {
+  let text4 = document.getElementById("demo4").innerHTML;
+  document.getElementById("demo4").innerHTML =
+  text4.toUpperCase();
+}*/
+
+let text1 = "Hello";
+let text2 = "World!";
+let text3 = text1.concat(" ",text2);
+document.getElementById("demo5").innerHTML = text3;
+
+var text4 = "HELLO WORLD";
+document.getElementById("demo6").innerHTML = text4.charAt(0);
+
+let text5 = "HELLO WORLD";
+document.getElementById("demo7").innerHTML = text5.charCodeAt(0);
+
+</script>
+
+</body>
+</html>
