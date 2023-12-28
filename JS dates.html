@@ -1,0 +1,167 @@
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Dates</h1>
+<h2>The getFullYear() Method</h2>
+<p>Return the full year of a date object:</p>
+
+<p id="demo"></p>
+
+<h2>The getMonth() Method</h2>
+<p>Return the month of a date as a number from 0 to 11.</p>
+<p>To get the correct month number, you must add 1:</p>
+
+<p id="demo1"></p>
+
+<h2>The getDate() Method</h2>
+<p>Return the day of a date as a number (1-31):</p>
+
+<p id="demo2"></p>
+
+<h2>The getHours() Method</h2>
+<p>Return the hours of a date as a number (0-23):</p>
+
+<p id="demo3"></p>
+
+<h2>The getMinutes() Method</h2>
+<p>Returns the minutes of a date as a number (0-59):</p>
+
+<p id="demo4"></p>
+
+<h2>The getSeconds() Method</h2>
+<p>Return the seconds of a date as a number (0-59):</p>
+
+<p id="demo5"></p>
+
+<h2>Using new Date()</h2>
+
+<p id="demo6"></p>
+
+<h2>Using new Date()</h2>
+
+<p>A date object can be created with a specified date and time:</p>
+<p id="demo7"></p>
+
+<h2>JavaScript new Date()</h2>
+
+<p>Using new Date(7 numbers), creates a new date object with the specified date and time:</p>
+
+<p id="demo8"></p>
+
+<p>JavaScript counts months from 0 to 11.</p>
+<p>Specifying a month higher than 11, will not result in an error but add the overflow to the next year:</p>
+
+<p id="demo9"></p>
+
+<p>JavaScript counts months from 0 to 11.</p>
+<p>Specifying a day higher than max, will not result in an error but add the overflow to the next month:</p>
+
+<p id="demo10"></p>
+
+<p>6 numbers specify year, month, day, hour, minute and second:</p>
+
+<p id="demo11"></p>
+
+<p>5 numbers specify year, month, day, hour, and minute:</p>
+
+<p id="demo12"></p>
+
+<p>One parameter will be interpreted as new Date(milliseconds).</p>
+
+<p id="demo13"></p>
+
+<p>Two digit years will be interpreted as 19xx:</p>
+
+<p id="demo14"></p>
+
+
+<script>
+    const d = new Date();
+    document.getElementById("demo").innerHTML = d.getFullYear();
+    document.getElementById("demo1").innerHTML = d.getMonth() + 1 ;
+    document.getElementById("demo2").innerHTML = d.getDate();
+    document.getElementById("demo3").innerHTML = d.getHours();
+    document.getElementById("demo4").innerHTML = d.getMinutes();
+    document.getElementById("demo5").innerHTML = d.getSeconds();
+    document.getElementById("demo6").innerHTML = d;
+
+    const d1 = new Date("October 13, 2014 11:13:00");
+    document.getElementById("demo7").innerHTML = d1;
+
+    const d2 = new Date(2018, 11, 24, 10, 33, 30, 0);
+    document.getElementById("demo8").innerHTML = d2;
+
+    const d3 = new Date(2018, 15, 24, 10, 33, 30, 0);
+    document.getElementById("demo9").innerHTML = d3;
+
+    const d4 = new Date(2018, 5, 35, 10, 33, 30, 0);
+    document.getElementById("demo10").innerHTML = d4;
+
+    const d5 = new Date(2018, 11, 24, 10, 33, 30);
+    document.getElementById("demo11").innerHTML = d5;
+
+    const d6 = new Date(2018, 11, 24, 10, 33);
+    document.getElementById("demo12").innerHTML = d6;
+
+    const d7 = new Date(2018);
+    document.getElementById("demo13").innerHTML = d7;
+
+    const d8 = new Date(99, 11, 24);
+    document.getElementById("demo14").innerHTML = d8;
+</script>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Dates</h1>
+<h2>Using new Date()</h2>
+
+<p>100000000000 milliseconds from January 01 1970 UTC is:</p>
+<p id="demo"></p>
+
+<p>-100000000000 milliseconds from January 01 1970 UTC is:</p>
+<p id="demo1"></p>
+
+<p>86400000 milliseconds from January 01 1970 UTC is:</p>
+<p>One day (24 hours) is 86,400,000 milliseconds.</p>
+<p id="demo2"></p>
+
+<p>0 milliseconds from January 01 1970 UTC is:</p>
+<p id="demo3"></p>
+
+<p>Convert a date to a string:</p>
+<p id="demo4"></p>
+
+<script>
+const d = new Date(100000000000);
+document.getElementById("demo").innerHTML = d;
+
+const d1 = new Date(-100000000000);
+document.getElementById("demo1").innerHTML = d1;
+
+const d2 = new Date(86400000);
+document.getElementById("demo2").innerHTML = d2;
+
+const d3 = new Date(0);
+document.getElementById("demo3").innerHTML = d3;
+
+const d4 = new Date();
+document.getElementById("demo4").innerHTML = d4.toString();
+//Convert a date to a date string:
+document.getElementById("demo4").innerHTML = d4.toDateString();
+//Convert a date to a string using the UTC standard:
+document.getElementById("demo4").innerHTML = d4.toUTCString();
+//Convert a date to a string using the ISO standard:
+document.getElementById("demo4").innerHTML = d4.toISOString();
+
+</script>
+
+</body>
+</html>
