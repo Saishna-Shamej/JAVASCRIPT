@@ -1,0 +1,422 @@
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+
+<p>Call a function once for each array element:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo").innerHTML = txt;
+
+function myFunction(value, index, array) {
+  txt += value + "<br>"; 
+}
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The map() Method</h2>
+
+<p>Create a new array by performing a function on each array element:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+document.getElementById("demo").innerHTML = numbers2;
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The flatMap() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+const myArr = [1, 2, 3, 4, 5,6];
+const newArr = myArr.flatMap((x) => x * 2);
+document.getElementById("demo").innerHTML = newArr;
+</script>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The filter() Method</h2>
+
+<p>Create a new array from all array elements that passes a test:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+document.getElementById("demo").innerHTML = over18;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The reduce() Method</h2>
+
+<p>Find the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The reduce() Method</h2>
+
+<p>Find the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction, 100);
+
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value) {
+  return total + value;
+}
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The reduceRight() Method</h2>
+
+<p>Find the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduceRight(myFunction);
+
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+</script>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The every() Method</h2>
+
+<p>The every() method checks if all array values pass a test.</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let allOver18 = numbers.every(myFunction);
+
+document.getElementById("demo").innerHTML = "All over 18 is " + allOver18;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The some() Method</h2>
+
+<p>The some() method checks if some array values pass a test:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let someOver18 = numbers.some(myFunction);
+
+document.getElementById("demo").innerHTML = "Some over 18 is " + someOver18;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The indexOf() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.indexOf("Apple") + 1;
+
+document.getElementById("demo").innerHTML = "Apple is found in position " + position;
+</script>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The lastIndexOf() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.lastIndexOf("Apple") + 1;
+
+document.getElementById("demo").innerHTML = "Apple is found in position " + position;
+</script>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The find() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+
+document.getElementById("demo").innerHTML = "First number over 18 is " + first;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The findIndex() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [4, 9, 16, 25, 29];
+
+document.getElementById("demo").innerHTML = "First number over 18 has index " + numbers.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The from() Method</h2>
+
+<p>Return an array object from any object with a length property or any iterable object.</p>
+
+<p id="demo"></p>
+
+<script>
+const myArr = Array.from("ABCDEFG");
+document.getElementById("demo").innerHTML = myArr;
+</script>
+
+<p>The Array.from() method is not supported in Internet Explorer.</p>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The keys() Method</h2>
+
+<p>Return an Array Iterator object with the keys of the array:</p>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits.keys();
+
+let text = "";
+for (let x of keys) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<p>Array.keys() is not supported in Internet Explorer.</p>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Arrays</h1>
+<h2>The entries() method</h2>
+
+<p>entries() returns an Array Iterator object with key/value pairs:</p>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits.entries();
+
+for (let x of f) {
+  document.getElementById("demo").innerHTML += x + "<br>";
+}
+</script>
+
+<p>The entries() method is not supported in Internet Explorer 11 (or earlier).</p>
+
+</body>
+</html>
+--
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The includes() Method</h2>
+
+<p>Check if the fruit array contains "Mango":</p>
+
+<p id="demo"></p>
+
+<p><strong>Note:</strong> The includes method is not supported in Edge 13 (and earlier versions).</p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.includes("Mango");
+</script>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Operators</h1>
+<h2>The ... Operator</h2>
+
+<p>The "spread" operator spreads elements of iterable objects:</p>
+
+<p id="demo"></p>
+
+<script>
+const q1 = ["Jan", "Feb", "Mar"];
+const q2 = ["Apr", "May", "Jun"];
+const q3 = ["Jul", "Aug", "Sep"];
+const q4 = ["Oct", "Nov", "May"];
+
+const year = [...q1, ...q2, ...q3, ...q4];
+document.getElementById("demo").innerHTML = year; 
+</script>
+
+</body>
+</html>
